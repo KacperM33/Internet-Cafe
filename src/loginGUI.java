@@ -5,6 +5,9 @@ import java.awt.event.ActionListener;
 public class loginGUI extends JFrame{
     private JPanel loginPanel;
     private JButton backButton;
+    private JTextField textField1;
+    private JPasswordField passwordField1;
+    private JButton zalogujButton;
 
     public static void main(String args[]){
         new loginGUI().setVisible(true);
