@@ -31,5 +31,22 @@ public class loginGUI extends JFrame{
                 new mainGUI().setVisible(true);
             }
         });
+
+        loginButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String login = loginText.getText();
+                String haslo = hasloPass.getText();
+                String loginCorrect = "admin";
+                String passCorrect = "admin";
+                if(login.equals(loginCorrect) && haslo.equals(passCorrect)){
+                    dispose();
+                    new bazaGUI().setVisible(true);
+                }
+                else{
+                    JOptionPane.showMessageDialog(null, "Niepoprawna nazwa użytkownika lub hasło!");
+                }
+            }
+        });
     }
 }

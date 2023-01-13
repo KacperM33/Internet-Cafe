@@ -8,7 +8,6 @@ public class mainGUI extends JFrame {
     private JButton loginButton;
     private JButton wypozyButton;
     private JButton kafejkaButton;
-    boolean check = true;
 
     public static void main(String[] args){
         new mainGUI().setVisible(true);
