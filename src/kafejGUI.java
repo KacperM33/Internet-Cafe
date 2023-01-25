@@ -18,10 +18,10 @@ public class kafejGUI extends JFrame{
     private JTextField minZakT;
     int godzStart = 0;
     int minStart = 0;
+
     public static void main(String args[]){
         new kafejGUI().setVisible(true);
     }
-
     public kafejGUI(){
         super("Kafejka");
         add(kafejPanel);
@@ -67,15 +67,6 @@ public class kafejGUI extends JFrame{
                     throw new NumberFormatException("zły format");
                 }
 
-//                try{
-//                    imieText.getText();
-//                    nazwText.getText();
-//                }
-//                catch (NullPointerException ex){
-//                    JOptionPane.showMessageDialog(null, "Podaj imie lub nazwisko!");
-//                    throw new NumberFormatException("brak imienia lub nazwiska");
-//                }
-
                 if(Integer.parseInt(godzZak)==0){
                     godzZak = "24";
                 }
@@ -120,6 +111,9 @@ public class kafejGUI extends JFrame{
                 else {
                     JOptionPane.showMessageDialog(null, "Witaj " + imieText.getText() + "!\nCzas trwania: "
                             + godzTrwania + "h " + minTrwania + "min\nNależność: "+koszt+"zł");
+
+                    uzytkownicy.dodaj(imieText.getText(), nazwText.getText(), godzStart+":"+minStart , godzZak+":"+minZak, koszt+" zł");
+
                     dispose();
                 }
             }
