@@ -1,8 +1,46 @@
 import java.sql.*;
+import java.util.ArrayList;
+
 public class uzytkownicy {
     private static String URL = "jdbc:mysql://localhost:3307/uzytkownicy";
     private static String USER = "root";
     private static String PASS = "root";
+    public String imie;
+    public String nazwisko;
+    public String czas_rozp;
+    public String czas_zak;
+    public String cena;
+    public static ArrayList<uzytkownicy> lista = new ArrayList<uzytkownicy>();
+    public uzytkownicy(String imie, String nazwisko, String czas_rozp, String czas_zak, String cena)
+    {
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        this.czas_rozp = czas_rozp;
+        this.czas_zak = czas_zak;
+        this.cena = cena;
+    }
+
+    public String getImie()
+    {
+        return this.imie;
+    }
+    public String getNazwisko()
+    {
+        return this.nazwisko;
+    }
+    public String getCzas_rozp()
+    {
+        return this.czas_rozp;
+    }
+    public String getCzas_zak()
+    {
+        return this.czas_zak;
+    }
+    public String getCena()
+    {
+        return this.cena;
+    }
+
     public static void dodaj(String _imie, String _nazwisko, String _czas_rozp, String _czas_zak, String _cena)
     {
         try {
@@ -13,13 +51,36 @@ public class uzytkownicy {
 
             statement.executeUpdate("INSERT INTO uzytkownicy.uzytkownicy (imie, nazwisko, czas_rozp, czas_zak, cena) VALUES " +
                     "('" +_imie+ "', '" +_nazwisko+ "','" +_czas_rozp+ "', '" +_czas_zak+ "', '" +_cena+ "')");
+        }
+        catch(Exception ex)
+        {
+            ex.printStackTrace();
+        }
+    }
 
-//            ResultSet select = statement.executeQuery("select * from `uzytkownicy`");
-//
-//            while (select.next()) {
-//                System.out.println(select.getString("imie")+" | "+select.getString("nazwisko")+" | "+
-//                        select.getString("czas_rozp")+" | "+select.getString("czas_zak")+" | "+select.getString("cena"));
-//            }
+    public static void pokaz()
+    {
+
+        try {
+
+            Connection connection = DriverManager.getConnection(URL, USER, PASS);
+
+            Statement statement = connection.createStatement();
+
+            String select = "SELECT imie, nazwisko, czas_rozp, czas_zak, cena FROM uzytkownicy.uzytkownicy";
+
+            ResultSet rezultat = statement.executeQuery(select);
+
+            while(rezultat.next())
+            {
+                String imie = rezultat.getString("imie");
+                String nazwisko = rezultat.getString("nazwisko");
+                String czas_rozp = rezultat.getString("czas_rozp");
+                String czas_zak = rezultat.getString("czas_zak");
+                String cena = rezultat.getString("cena");
+                lista.add(new uzytkownicy(imie, nazwisko, czas_rozp, czas_zak, cena));
+            }
+
         }
         catch(Exception ex)
         {
@@ -29,7 +90,8 @@ public class uzytkownicy {
 
     public static void main(String [] args)
     {
-//        uzytkownicy.dodaj("maciej", "paciej", "20:06", "23:15", 55);
+//        uzytkownicy.pokaz();
+//        uzytkownicy.dodaj("maciej", "paciej", "20:06", "23:15", "55 zł");
     }
 
 }
