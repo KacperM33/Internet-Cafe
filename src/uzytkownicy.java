@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.PrintWriter;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -80,7 +82,56 @@ public class uzytkownicy {
                 String cena = rezultat.getString("cena");
                 lista.add(new uzytkownicy(imie, nazwisko, czas_rozp, czas_zak, cena));
             }
+        }
+        catch(Exception ex)
+        {
+            ex.printStackTrace();
+        }
+    }
 
+    public static void pobierz()
+    {
+
+        try {
+
+            Connection connection = DriverManager.getConnection(URL, USER, PASS);
+
+            Statement statement = connection.createStatement();
+
+            String select = "SELECT imie, nazwisko, czas_rozp, czas_zak, cena FROM uzytkownicy.uzytkownicy";
+
+            ResultSet rezultat = statement.executeQuery(select);
+
+            PrintWriter pw = new PrintWriter(new File("C:\\Users\\Kacper\\Documents\\uzytkownicy_tabela.csv"));
+            StringBuilder sb = new StringBuilder();
+
+            sb.append("Imie");
+            sb.append(";");
+            sb.append("Nazwisko");
+            sb.append(";");
+            sb.append("Czas rozpoczecia");
+            sb.append(";");
+            sb.append("Czas zakończenia");
+            sb.append(";");
+            sb.append("Cena");
+            sb.append("\r\n");
+
+            while(rezultat.next())
+            {
+                sb.append(rezultat.getString("imie"));
+                sb.append(";");
+                sb.append(rezultat.getString("nazwisko"));
+                sb.append(";");
+                sb.append(rezultat.getString("czas_rozp"));
+                sb.append(";");
+                sb.append(rezultat.getString("czas_zak"));
+                sb.append(";");
+                sb.append(rezultat.getString("cena"));
+                sb.append("\r\n");
+            }
+
+            pw.write(sb.toString());
+            pw.close();
         }
         catch(Exception ex)
         {
@@ -90,8 +141,9 @@ public class uzytkownicy {
 
     public static void main(String [] args)
     {
-//        uzytkownicy.pokaz();
 //        uzytkownicy.dodaj("maciej", "paciej", "20:06", "23:15", "55 zł");
+//        uzytkownicy.pokaz();
+//        uzytkownicy.pobierz();
     }
 
 }

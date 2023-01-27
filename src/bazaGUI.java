@@ -7,13 +7,14 @@ public class bazaGUI extends JFrame{
     private JPanel bazaPanel;
     private JButton button1;
     private JTable tabelaBaza;
+    private JButton eksportButton;
     DefaultTableModel model;
     public static void main(String args[]){
         new bazaGUI().setVisible(true);
     }
 
     public bazaGUI(){
-        super("Użtkownicy");
+        super("Użytkownicy");
         this.setContentPane(bazaPanel);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(800, 600);
@@ -41,6 +42,12 @@ public class bazaGUI extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 dispose();
                 new mainGUI().setVisible(true);
+            }
+        });
+        eksportButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                uzytkownicy.pobierz();
             }
         });
     }
