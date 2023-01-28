@@ -49,7 +49,6 @@ public class wypoz
                 String wydawca = rezultat.getString("wydawca");
                 String cena = rezultat.getString("cena");
                 listaGry.add(new wypoz(tytul, wydawca, cena));
-//                System.out.println(tytul+" | "+wydawca+" | "+cena);
             }
         }
         catch(Exception ex)
@@ -73,11 +72,5 @@ public class wypoz
         {
             ex.printStackTrace();
         }
-    }
-
-    public static void main(String[] args)
-    {
-//        wypoz.delete(3);
-//        wypoz.connect();
     }
 }

@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 public class bazaGUI extends JFrame{
     private JPanel bazaPanel;
-    private JButton button1;
+    private JButton backButton;
     private JTable tabelaBaza;
     private JButton eksportButton;
     DefaultTableModel model;
@@ -17,8 +17,11 @@ public class bazaGUI extends JFrame{
         super("Użytkownicy");
         this.setContentPane(bazaPanel);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(800, 600);
+        this.setSize(900, 600);
         setLocationRelativeTo(null);
+        backButton.setIcon(new ImageIcon(getClass().getResource("backBut.png")));
+
+        uzytkownicy.lista.clear();
         uzytkownicy.pokaz();
 
         model = new DefaultTableModel();
@@ -37,7 +40,7 @@ public class bazaGUI extends JFrame{
             model.addRow(row);
         }
 
-        button1.addActionListener(new ActionListener() {
+        backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();

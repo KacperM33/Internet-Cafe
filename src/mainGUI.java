@@ -17,8 +17,11 @@ public class mainGUI extends JFrame {
         super("Kafejka internetowa");
         this.setContentPane(this.mainPanel);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(800, 600);
+        this.setSize(900, 600);
         setLocationRelativeTo(null);
+        kafejkaButton.setIcon(new ImageIcon(getClass().getResource("przycisk1.png")));
+        wypozyButton.setIcon(new ImageIcon(getClass().getResource("przycisk2.png")));
+        loginButton.setIcon(new ImageIcon(getClass().getResource("admin.png")));
 
         kafejkaButton.addActionListener(new ActionListener() {
             @Override

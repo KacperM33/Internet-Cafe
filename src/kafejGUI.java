@@ -26,9 +26,10 @@ public class kafejGUI extends JFrame{
         super("Kafejka");
         add(kafejPanel);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(800, 600);
+        setSize(900, 600);
         setLocationRelativeTo(null);
-        obrazek.setIcon(new ImageIcon(getClass().getResource("obrazek1.jpg")));
+        obrazek.setIcon(new ImageIcon(getClass().getResource("obrazek.jpg")));
+        backButton.setIcon(new ImageIcon(getClass().getResource("backBut.png")));
 
         backButton.addActionListener(new ActionListener() {
             @Override

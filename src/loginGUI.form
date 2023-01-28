@@ -13,7 +13,9 @@
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-16567743"/>
+        </properties>
         <border type="none"/>
         <children>
           <grid id="5c6bd" layout-manager="GridLayoutManager" row-count="4" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -21,7 +23,9 @@
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-16567743"/>
+            </properties>
             <border type="none"/>
             <children>
               <hspacer id="6c2bf">
@@ -34,7 +38,9 @@
                 <constraints>
                   <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <background color="-16567743"/>
+                </properties>
                 <border type="none"/>
                 <children>
                   <component id="4f721" class="javax.swing.JPasswordField" binding="hasloPass">
@@ -66,6 +72,7 @@
                       </grid>
                     </constraints>
                     <properties>
+                      <foreground color="-986896"/>
                       <horizontalAlignment value="0"/>
                       <text value="LOGIN:"/>
                     </properties>
@@ -77,6 +84,7 @@
                       </grid>
                     </constraints>
                     <properties>
+                      <foreground color="-986896"/>
                       <horizontalAlignment value="0"/>
                       <text value="HASŁO:"/>
                     </properties>
@@ -118,7 +126,8 @@
                   </grid>
                 </constraints>
                 <properties>
-                  <text value="&lt;---"/>
+                  <horizontalTextPosition value="0"/>
+                  <text value=""/>
                 </properties>
               </component>
               <hspacer id="ed782">

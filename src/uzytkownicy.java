@@ -111,7 +111,7 @@ public class uzytkownicy {
             sb.append(";");
             sb.append("Czas rozpoczecia");
             sb.append(";");
-            sb.append("Czas zakończenia");
+            sb.append("Czas zakonczenia");
             sb.append(";");
             sb.append("Cena");
             sb.append("\r\n");
@@ -138,12 +138,4 @@ public class uzytkownicy {
             ex.printStackTrace();
         }
     }
-
-    public static void main(String [] args)
-    {
-//        uzytkownicy.dodaj("maciej", "paciej", "20:06", "23:15", "55 zł");
-//        uzytkownicy.pokaz();
-//        uzytkownicy.pobierz();
-    }
-
 }

@@ -21,9 +21,10 @@ public class loginGUI extends JFrame{
         super("Logowanie");
         this.setContentPane(loginPanel);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(800,600);
+        this.setSize(900,600);
         setLocationRelativeTo(null);
-        obrazek.setIcon(new ImageIcon(getClass().getResource("Tux.png")));
+        obrazek.setIcon(new ImageIcon(getClass().getResource("admin2.png")));
+        backButton.setIcon(new ImageIcon(getClass().getResource("backBut.png")));
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
