@@ -12,7 +12,7 @@ This project was completed as the final assignment for the *Object-Oriented Prog
 
 ### 🔸 Main view of the application
 
-![image](https://github.com/user-attachments/assets/7fd88d38-f905-4d3d-a8de-2f8fc8c48b6d)
+<img src="https://github.com/user-attachments/assets/7fd88d38-f905-4d3d-a8de-2f8fc8c48b6d" width="600"/>
 
 In the main view, the customer can choose between two options:
 - Left: Use the internet café
@@ -22,25 +22,25 @@ The administrator can also click the avatar icon to log into the admin account.
 
 ### 🔸 Internet Café usage
 
-![image](https://github.com/user-attachments/assets/38ee2c4d-4cf4-4ab3-9cca-64edc034b3fb)
+<img src="https://github.com/user-attachments/assets/38ee2c4d-4cf4-4ab3-9cca-64edc034b3fb" width="600"/>
 
 This view allows the customer to fill out a form to start their session. The system automatically calculates the total amount to be paid based on the selected end time.
 
 ### 🔸 Renting games
 
-![image](https://github.com/user-attachments/assets/efd476aa-e977-47f8-a124-dd2eb8d411d7)
+<img src="https://github.com/user-attachments/assets/efd476aa-e977-47f8-a124-dd2eb8d411d7" width="600"/>
 
 This is the view where available games can be rented. The user selects a game by clicking on it and then presses the button at the bottom of the screen to confirm the rental.
 
 ### 🔸 Admin login view
 
-![image](https://github.com/user-attachments/assets/8cc47e26-c2c6-48a7-a077-86b1a8841bec)
+<img src="https://github.com/user-attachments/assets/8cc47e26-c2c6-48a7-a077-86b1a8841bec" width="600"/>
 
 A simple login screen for administrators to access the admin panel.
 
 ### 🔸 User activity view (for admin)
 
-![image](https://github.com/user-attachments/assets/b76c8369-9d41-4cf8-b310-56fbc5b96126)
+<img src="https://github.com/user-attachments/assets/b76c8369-9d41-4cf8-b310-56fbc5b96126" width="600"/>
 
 In this view, the admin can see a list of users who used the internet café, including their start time, end time, and the total price they paid.
 By clicking the button at the bottom of the screen, the admin can export this user data.
